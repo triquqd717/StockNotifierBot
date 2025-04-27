@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Notify Privacy Policy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    p, li {
+      color: #555;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stock Notify Privacy Policy</h1>
+  <p><strong>Effective Date:</strong> April 27, 2025</p>
+
+  <h2>1. Introduction</h2>
+  <p>Stock Notify is a Discord bot that provides stock updates for in-game items in "Grow a Garden." This Privacy Policy explains how we collect, use, store, and protect your data when you interact with the bot. By using Stock Notify, you agree to this Privacy Policy.</p>
+
+  <h2>2. Data We Collect</h2>
+  <p>We collect the following data to operate the bot and ensure its functionality:</p>
+  <ul>
+    <li><strong>Discord Interactions:</strong>
+      <ul>
+        <li>Commands executed (e.g., /setup, /update), including guild ID, channel ID, user ID, username, message content (if applicable), and timestamp.</li>
+        <li>Messages where the bot is mentioned in configured channels, including message content, guild ID, channel ID, user ID, username, and timestamp.</li>
+        <li>Direct messages (DMs) sent to the bot, including message content, user ID, username, and timestamp.</li>
+        <li>Replies to the bot’s messages, including message content, guild ID, channel ID, user ID, username, and timestamp.</li>
+      </ul>
+    </li>
+    <li><strong>Guild Configurations:</strong>
+      <ul>
+        <li>Server settings, such as channel IDs for crops and gear updates, stock update preferences, and ping role assignments, stored in a SQLite database.</li>
+      </ul>
+    </li>
+    <li><strong>Cached Data:</strong>
+      <ul>
+        <li>Guild names, cached in memory to reduce API calls, but not stored persistently.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>3. How We Use Your Data</h2>
+  <ul>
+    <li><strong>Bot Functionality:</strong> To process commands, post stock updates, ping roles, and respond to mentions or DMs.</li>
+    <li><strong>Debugging:</strong> To troubleshoot issues, such as command failures or permission errors, using logged data.</li>
+    <li><strong>Transparency:</strong> To maintain a record of interactions for accountability.</li>
+  </ul>
+
+  <h2>4. Data Storage and Security</h2>
+  <ul>
+    <li><strong>Storage:</strong>
+      <ul>
+        <li>Interaction logs (commands, mentions, DMs, replies) are stored in a local `messages.json` file on the bot’s server.</li>
+        <li>Guild configurations are stored in a local SQLite database (`database.sqlite`).</li>
+        <li>Data is not shared with third parties, except as required by law or Discord’s policies.</li>
+      </ul>
+    </li>
+    <li><strong>Security:</strong> We implement reasonable measures to protect data, such as restricting access to the bot’s server. However, no system is completely secure, and we cannot guarantee absolute security.</li>
+    <li><strong>Retention:</strong> Logs are retained for debugging purposes and periodically reviewed. We may delete logs older than 30 days to minimize data storage.</li>
+  </ul>
+
+  <h2>5. Data Sharing</h2>
+  <ul>
+    <li>We do not sell or share your data with third parties, except:
+      <ul>
+        <li>To comply with legal obligations or Discord’s policies.</li>
+        <li>To protect our rights or safety, or that of others.</li>
+      </ul>
+    </li>
+    <li>Data may be accessed by the bot’s developer for debugging or maintenance.</li>
+  </ul>
+
+  <h2>6. Your Rights</h2>
+  <ul>
+    <li><strong>Opt-Out:</strong> You can opt out of data collection by not interacting with the bot (e.g., not using commands, mentioning the bot, or sending DMs). Server administrators can disable the bot using the /disable command or remove it from the server.</li>
+    <li><strong>Access and Deletion:</strong> To request access to or deletion of your data, contact Alex at <a href="mailto:actlikeuh@gmail.com">actlikeuh@gmail.com</a>. We will respond within a reasonable timeframe, subject to technical feasibility.</li>
+    <li><strong>Jurisdictional Rights:</strong> Depending on your location (e.g., California under CCPA), you may have additional rights, such as data portability or correction. Contact us to exercise these rights.</li>
+  </ul>
+
+  <h2>7. Third-Party Services</h2>
+  <ul>
+    <li><strong>Discord:</strong> The bot operates on Discord’s platform, subject to Discord’s <a href="https://discord.com/privacy">Privacy Policy</a>.</li>
+    <li><strong>Data Source:</strong> Stock updates are sourced from <a href="https://vulcanvalues.com">https://vulcanvalues.com</a>, a third-party website. We do not control their data practices.</li>
+    <li><strong>No Analytics or Ads:</strong> The bot does not use analytics tools (e.g., Google Analytics) or display ads.</li>
+  </ul>
+
+  <h2>8. AI and Machine Learning</h2>
+  <ul>
+    <li>We do not use your data to train machine learning or AI models. Logged data is used solely for bot functionality and debugging.</li>
+  </ul>
+
+  <h2>9. Children’s Privacy</h2>
+  <ul>
+    <li>Stock Notify is not intended for users under 13. If we learn that we have collected data from a user under 13, we will delete it promptly.</li>
+  </ul>
+
+  <h2>10. Changes to the Privacy Policy</h2>
+  <ul>
+    <li>We may update this Privacy Policy at any time. Changes will be posted on this page. Continued use of the bot after changes constitutes acceptance of the updated policy.</li>
+  </ul>
+
+  <h2>11. Contact</h2>
+  <ul>
+    <li>For questions, data requests, or concerns, contact Alex at <a href="mailto:actlikeuh@gmail.com">actlikeuh@gmail.com</a>.</li>
+  </ul>
+
+  <h2>12. Governing Law</h2>
+  <ul>
+    <li>This Privacy Policy is governed by the laws of the United States, without regard to conflict of law principles.</li>
+  </ul>
+</body>
+</html>
