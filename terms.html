@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stock Notify Privacy Policy</title>
+<title>Stock Notify Terms of Service</title>
 <style>
 body {
 font-family: Arial, sans-serif;
@@ -28,106 +28,57 @@ text-decoration: underline;
 </style>
 </head>
 <body>
-<h1>Stock Notify Privacy Policy</h1>
+<h1>Stock Notify Terms of Service</h1>
 <p><strong>Effective Date:</strong> May 30, 2025</p>
 <h2>1. Introduction</h2>
-<p>Stock Notify is a Discord bot that provides stock updates for in-game items (seeds, gear, eggs), weather, cosmetics, and night shop items in "Grow a Garden." This Privacy Policy explains how we collect, use, store, and protect your data when you interact with the bot. By using Stock Notify, you agree to this Privacy Policy.</p>
-<h2>2. Data We Collect</h2>
-<p>We collect the following data to operate the bot and ensure its functionality:</p>
+<p>Welcome to Stock Notify, a Discord bot that provides real-time stock updates for in-game items (seeds, gear, and eggs), weather, cosmetics, and night shop items in the game "Grow a Garden." Data is sourced from our internal game data APIs. By adding Stock Notify to your Discord server or interacting with it, you agree to these Terms of Service ("ToS"). If you do not agree, please do not use the bot.</p>
+<h2>2. Use of the Bot</h2>
 <ul>
-<li><strong>Discord Interactions:</strong>
+<li><strong>Eligibility:</strong> You must be at least 13 years old to use Stock Notify, in compliance with Discord’s Terms of Service.</li>
+<li><strong>Permitted Use:</strong> You may use Stock Notify to receive configured updates and manage settings via provided commands (e.g., /setup, /setpingrole, /stock, /update). You agree to use the bot in accordance with Discord’s <a href="https://discord.com/terms">Terms of Service</a> and <a href="https://discord.com/guidelines">Community Guidelines</a>.</li>
+<li><strong>Prohibited Use:</strong> You may not:
 <ul>
-<li>Commands executed (e.g., /setup, /setpingrole, /stock), including guild ID, channel ID (where applicable), user ID of the executor, command options selected, and timestamp. This data is primarily used for command processing and debugging.</li>
-</ul>
-</li>
-<li><strong>Guild Configurations:</strong>
-<ul>
-<li>Server settings, such as channel IDs for stock, weather, cosmetics, night stock, and egg updates.</li>
-<li>Webhook URLs for these channels if the bot is configured to use them (typically for servers with fewer than 500 members or if manually configured via future commands).</li>
-<li>Preferences for enabling/disabling updates (e.g., via /enable or /disable).</li>
-<li>Ping role assignments for specific items or events (e.g., via /setpingrole).</li>
-<li>Whitelisted user IDs and associated commands (e.g., via /addwhitelist).</li>
-<li>This configuration data is stored in a local SQLite database.</li>
-</ul>
-</li>
-<li><strong>Cached Data (In-Memory):</strong>
-<ul>
-<li><strong>Guild Configurations:</strong> A temporary in-memory cache of guild configurations for active guilds to improve performance.</li>
-<li><strong>Role Cache:</strong> A temporary in-memory cache (LRU - Least Recently Used) of Discord Role objects for guilds that have configured ping roles, to optimize fetching role information.</li>
-<li><strong>Last Send Times:</strong> Timestamps of when updates were last sent to a guild for different categories to manage update frequency.</li>
-<li><strong>Previous Global Data States:</strong> The bot temporarily stores the last known global state of stock, weather, cosmetics, and night shop data to compare against new data and determine if an update is needed. This does not contain server-specific information.</li>
-<li><strong>Processed Interaction IDs:</strong> A temporary set of interaction IDs is kept in memory for a short duration (e.g., 60 seconds) to prevent duplicate processing of the same command.</li>
+<li>Use the bot for illegal activities or to violate Discord’s policies.</li>
+<li>Attempt to reverse-engineer, hack, or disrupt the bot’s functionality.</li>
+<li>Spam commands or abuse the bot’s features to harass others.</li>
+<li>Use the bot in a way that infringes on the rights of others, including intellectual property rights.</li>
 </ul>
 </li>
 </ul>
-<h2>3. How We Use Your Data</h2>
+<h2>3. Bot Functionality</h2>
 <ul>
-<li><strong>Bot Functionality:</strong> To process commands, post stock, weather, cosmetics, night shop, and egg updates to configured channels, manage and apply ping roles, manage whitelists, and send messages via direct bot messages or Discord webhooks as appropriate.</li>
-<li><strong>Debugging & Monitoring:</strong> To troubleshoot issues, such as command failures, update errors, or permission problems, using interaction data and internal operational logs. These logs are typically high-level and do not store message content beyond command parameters.</li>
-<li><strong>Performance Optimization:</strong> Caching is used to reduce redundant data fetching and improve the bot's responsiveness.</li>
+<li>Stock Notify posts updates to designated Discord channels when relevant game data changes, using data from our internal game data APIs.</li>
+<li>The bot can send updates for various categories including regular item stock (seeds, gear, eggs), special night stock, cosmetic shop items, and in-game weather events.</li>
+<li>For servers with fewer than 500 members (unless prioritized), the bot may utilize Discord webhooks for sending messages, which can be automatically created if the bot has the "Manage Webhooks" permission. For larger servers, messages are typically sent directly by the bot.</li>
+<li>Commands are restricted to authorized users (e.g., server owners, administrators, or whitelisted users as configured via /addwhitelist) to prevent misuse.</li>
 </ul>
-<h2>4. Data Storage and Security</h2>
+<h2>4. Data Collection and Privacy</h2>
 <ul>
-<li><strong>Storage:</strong>
-<ul>
-<li>Guild configurations, ping roles, and whitelist information are stored in a local SQLite database (`database.sqlite`) on the bot’s server.</li>
-<li>Operational logs (e.g., command executions, errors) are typically written to console output or system logs on the server for monitoring and debugging by the developer. These are not designed for long-term storage of user-specific interaction details beyond what's necessary for troubleshooting.</li>
+<li>Stock Notify collects and logs certain data to function and for debugging purposes. For details, please review our <a href="./privacy.html">Privacy Policy</a>.</li>
+<li>By using the bot, you consent to the collection and use of data as described in the Privacy Policy.</li>
 </ul>
-</li>
-<li><strong>Security:</strong> We implement reasonable measures to protect data, such as restricting access to the bot’s server and database. However, no system is completely secure, and we cannot guarantee absolute security.</li>
-<li><strong>Retention:</strong>
+<h2>5. Limitation of Liability</h2>
 <ul>
-<li>Guild configuration data (including channels, webhooks, ping roles, whitelist) is retained as long as the bot is configured in your server or until a server administrator requests its deletion. If you remove the bot from your server, this data may be removed after a reasonable period or upon request.</li>
-<li>Operational logs are periodically reviewed and may be rotated or deleted (e.g., older than 30-90 days) to minimize data storage, unless specific logs are needed for ongoing issue resolution.</li>
-<li>In-memory cached data is transient and lost when the bot restarts or as items are evicted from caches (e.g., LRU cache).</li>
+<li>Stock Notify is provided "as is" without warranties of any kind, express or implied. We do not guarantee the accuracy, reliability, or availability of game data or bot functionality.</li>
+<li>We are not liable for any damages arising from your use of the bot, including but not limited to data loss, server disruptions, or missed updates.</li>
+<li>The bot relies on data from our internal game data APIs. While we strive for accuracy, we are not responsible for discrepancies or issues originating from these APIs.</li>
 </ul>
-</li>
-</ul>
-<h2>5. Data Sharing</h2>
+<h2>6. Termination</h2>
 <ul>
-<li>We do not sell your personal data.</li>
-<li>We do not share your data with third parties, except:
-<ul>
-<li>To comply with legal obligations or valid legal processes.</li>
-<li>To enforce our ToS or protect our rights, property, or safety, or that of others.</li>
-<li>With Discord via its API, which is necessary for the bot's operation (e.g., sending messages, processing commands).</li>
-<li>If your server uses webhooks for notifications (either auto-created by the bot with permission, or manually configured), the message content (e.g., stock update embeds) is sent via Discord's webhook infrastructure to the designated channel in your server. Webhook URLs configured for your server are stored as part of your guild's configuration.</li>
+<li>We reserve the right to suspend or remove Stock Notify from any server or block any user for violating these ToS, Discord’s policies, or due to inclusion in our internal banned guilds list.</li>
+<li>You may remove the bot from your server at any time by kicking or banning it via Discord’s server settings. Configuration data associated with your server may be retained for a period as outlined in our Privacy Policy or can be requested for deletion.</li>
 </ul>
-</li>
-<li>Data may be accessed by the bot’s developer (Alex) for debugging, maintenance, and operational purposes.</li>
-</ul>
-<h2>6. Your Rights</h2>
+<h2>7. Changes to the ToS</h2>
 <ul>
-<li><strong>Opt-Out:</strong> You can opt-out of most data collection by not interacting with the bot (e.g., not using its commands). Server administrators can disable all automatic updates from the bot using the <code>/disable</code> command or by removing the bot from the server.</li>
-<li><strong>Access and Deletion:</strong> To request access to or deletion of your server’s configuration data, contact Alex at <a href="mailto:actlikeuh@gmail.com">actlikeuh@gmail.com</a>. We will respond within a reasonable timeframe, subject to technical feasibility and verification of your authority to make such a request for a server.</li>
-<li><strong>Data Correction:</strong> Guild configuration settings (like channels or ping roles) can be modified using the bot's commands (e.g., <code>/setup</code>, <code>/setpingrole</code>, <code>/removepingrole</code>).</li>
-<li><strong>Jurisdictional Rights:</strong> Depending on your location, you may have additional rights regarding your data. Contact us to exercise these rights.</li>
+<li>We may update these ToS at any time. Changes will be posted on this page, and we will endeavor to notify users of significant changes. Continued use of the bot after changes constitutes acceptance of the updated ToS.</li>
 </ul>
-<h2>7. Third-Party Services</h2>
+<h2>8. Contact</h2>
 <ul>
-<li><strong>Discord:</strong> The bot operates on Discord’s platform and is subject to Discord’s <a href="https://discord.com/privacy">Privacy Policy</a> and <a href="https://discord.com/terms">Terms of Service</a>.</li>
-<li><strong>Data Source:</strong> Stock, weather, cosmetics, and night shop updates are sourced from our internal game data APIs. The bot itself does not scrape third-party websites for this game data.</li>
-<li><strong>No External Analytics or Ads:</strong> The bot does not currently use third-party analytics tools (e.g., Google Analytics) to track your individual usage of the bot itself, nor does it display third-party advertisements.</li>
+<li>For questions or concerns about these ToS, contact Alex at <a href="mailto:actlikeuh@gmail.com">actlikeuh@gmail.com</a>.</li>
 </ul>
-<h2>8. AI and Machine Learning</h2>
+<h2>9. Governing Law</h2>
 <ul>
-<li>We do not use your data to train machine learning or AI models. Data collected is used solely for bot functionality, operational monitoring, and debugging.</li>
-</ul>
-<h2>9. Children’s Privacy</h2>
-<ul>
-<li>Stock Notify is not intended for users under 13. We do not knowingly collect personal information from children under 13. If we learn that we have inadvertently collected data from a user under 13, we will take steps to delete it promptly. If you are a parent or guardian and believe your child under 13 has provided us with information, please contact us.</li>
-</ul>
-<h2>10. Changes to the Privacy Policy</h2>
-<ul>
-<li>We may update this Privacy Policy at any time. Changes will be posted on this page, and we will endeavor to notify users of significant changes. Continued use of the bot after changes constitutes acceptance of the updated policy.</li>
-</ul>
-<h2>11. Contact</h2>
-<ul>
-<li>For questions, data requests, or concerns about this Privacy Policy, contact Alex at <a href="mailto:actlikeuh@gmail.com">actlikeuh@gmail.com</a>.</li>
-</ul>
-<h2>12. Governing Law</h2>
-<ul>
-<li>This Privacy Policy is governed by the laws of the United States, without regard to conflict of law principles.</li>
+<li>These ToS are governed by the laws of the United States, without regard to conflict of law principles.</li>
 </ul>
 </body>
 </html>
